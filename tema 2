@@ -1,0 +1,13 @@
+import string
+sir_articol=' O contabilă de la MAE este acuzată că a plătit salarii false iubitului ei și fiului acestuia, deși nu erau angajați la minister.'
+jumatate=len(sir_articol)//2
+prima_parte=sir_articol[:jumatate]
+a_doua_parte=sir_articol[jumatate:]
+prima_parte=prima_parte.upper()
+text_fara_spatii=prima_parte.strip()
+print(f'{text_fara_spatii}')
+a_doua_parte=a_doua_parte[::-1]
+a_doua_parte=a_doua_parte.capitalize()
+a_doua_parte=a_doua_parte.translate(str.maketrans('','',string.punctuation))
+rezultat=prima_parte+a_doua_parte
+print(rezultat)
